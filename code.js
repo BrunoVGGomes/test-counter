@@ -3,7 +3,7 @@ class Counter {
       this.elInput = document.querySelector('#total-input');
       this.elAdd = document.querySelector('#add-value');
       this.elSub = document.querySelector('#sub-value');
-      this.resetButton = document.querySelector('#reset-button');
+      this.elResetButton = document.querySelector('#reset-button');
       this.total = 0;
   
       console.log('ElInput =', this.elInput, this.total);
@@ -40,8 +40,8 @@ class Counter {
         });
       }
 
-      if (this.resetButton) {
-        this.resetButton.addEventListener('click', () => {
+      if (this.elResetButton) {
+        this.elResetButton.addEventListener('click', () => {
           this.total = 0;
           this.updateTotal();
         });
